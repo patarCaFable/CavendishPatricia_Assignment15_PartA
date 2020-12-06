@@ -2,15 +2,17 @@
 class Letter
 {
 private:
-	char start, nuChar;
+	char start, target;
 	int offset;
 public:
 	Letter();
 	void setCharacter(char start, int offset);
 	char getCharacter();
-	//exception class
+	//exception class for a non-alphabetical character
 	class invalidCharacterException {};
-	//exception calss
+	//exception class for an invalid range
 	class invalidRangeException {};
+	//exception class for case-to-case transition
+	class invalidCaseException {};
 };
 
