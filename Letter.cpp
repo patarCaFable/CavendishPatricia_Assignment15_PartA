@@ -30,7 +30,7 @@ int main() {
 		cout << "Error: An invalid range was enetered.\n";
 	}
 	catch (Letter::invalidCaseException) {
-		cout << "Error: Case transition not allowed.\n";
+		cout << "Error: Case-to-case transition not allowed.\n";
 	}
 	cout << endl << endl;
 	system("PAUSE");
@@ -50,10 +50,10 @@ Letter::Letter()
 //Letter class mutator function. Accepts two parameters. Sets the value of target.
 void Letter::setCharacter(char start, int offset)
 {
-	if (!isalpha(start)) {									//if start is not a letter of the alphabet
+	if (!isalpha(start)) {						//if start is not a letter of the alphabet
 		throw invalidCharacterException();
 	}
-	else if (!isalpha(start + offset)) {					//if the target passes outside of the acceptable range
+	else if (!isalpha(start + offset)) {				//if the target passes outside of the acceptable range
 		throw invalidRangeException();
 	}
 	else if (isupper(start) && islower(start + offset) || 
