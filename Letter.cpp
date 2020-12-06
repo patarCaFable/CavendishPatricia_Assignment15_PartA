@@ -47,6 +47,7 @@ Letter::Letter()
 void Letter::setCharacter(char start, int offset)
 {
 	nuChar = start + offset;	
+
 }
 
 //SET CHARACTER																	
